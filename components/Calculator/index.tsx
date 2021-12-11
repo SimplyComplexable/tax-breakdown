@@ -19,7 +19,16 @@ const allFederalBrackets = {
 };
 
 const allStateBrackets = {
-  ut: [[0, 0.1]],
+  co: [[0, 0.0495]],
+  il: [[0, 0.0495]],
+  in: [[0, 0.0323]],
+  ky: [[0, 0.05]],
+  ma: [[0, 0.05]],
+  mi: [[0, 0.0425]],
+  nh: [[0, 0.05]],
+  nc: [[0, 0.0525]],
+  pa: [[0, 0.0307]],
+  ut: [[0, 0.0425]],
 };
 
 const states = Object.keys(allStateBrackets);
@@ -127,7 +136,7 @@ export const Calculator = () => {
                   <tr key={index} className="breakdown-item">
                     <td>{formatMoney(incomeAcount)}</td>
                     <td>{toFixedDecimal(percent * 100)}%</td>
-                    <td>{toFixedDecimal(taxAmount)}</td>
+                    <td>{formatMoney(taxAmount)}</td>
                   </tr>
                 )
               )}
